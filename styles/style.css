@@ -110,14 +110,16 @@ body{
 }
 .navbar{
     background-color: var(--primary-800);
+
 }
 
 .navbar__list{
     display: flex;
-    padding: 12px 0;
+    /* padding: 12px 0; */
     width: 100%;
     margin: 0 auto;
     list-style: none;
+    align-items: center;
 }
 
 .navbar__link{
@@ -126,7 +128,7 @@ body{
     align-items: center;
     text-decoration: none;
     color: var(--white);
-    padding: 4px 0;
+    /* padding: 4px 0; */
 
 }
 
@@ -141,4 +143,12 @@ body{
     }
 }
 
+.navbar__link.active {
+    background-color: var(--white);
+    color: var(--primary-950);
+    font-weight: bold;
+    padding: 8px 24px;
+    /* border-radius: 0.6rem; */
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
 
