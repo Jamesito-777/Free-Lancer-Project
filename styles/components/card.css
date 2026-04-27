@@ -1,9 +1,72 @@
-.card-container {
-    display:  grid;
+/* Contenedor de las cards */
+/* Esto significa responsividad */
+.services__cards-container{
+    display: grid;
     justify-content: center;
-    border: solid 5px red;
-    color: var(--black);
-    z-index: 100;
-    height: 300px;
-    
+    margin: 0 24px;
+    row-gap: 24px;
 }
+@media (width > 768px) {
+    .services__cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (width > 769px) {
+    .services__cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (width > 1025px) {
+    .services__cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ================================
+            Cards
+===================================*/
+
+.card {
+    text-align: center;
+    border: 1px solid var(--tertiary-950);
+    border-radius: 4px;
+    padding: 0 16px;
+    box-shadow: 0px 4px 10px rgba( 0, 0, 0, 0.5);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba( 0, 0, 0, 0.5);
+}
+
+/* ================================
+            Íconos
+===================================*/
+
+.card__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 24px;
+}
+.card__icon--main {
+    height: 56px;
+    width: 56px;
+}
+.card__icon--secundary {
+    height: 36px;
+    width: 36px;
+}
+
+/* BREACKPOINTS */
+
+/*
+    sm 640px    Telefonos grandes
+    md 768px    Tablets
+    lg 1024 laptops
+    xl 1280px   Escritorios
+    2xl 1536px Pantallas grandes
+*/
